@@ -1,6 +1,7 @@
 package ru.chursin;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.w3c.dom.ls.LSOutput;
 
 /**
  * Hello world!
@@ -13,5 +14,7 @@ public class App
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext("ru.chursin");
         context.getBean(OperationCosoleListener.class).listenUpdates();
+        System.out.println("hhh");
     }
+
 }
