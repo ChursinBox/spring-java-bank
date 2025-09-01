@@ -14,7 +14,6 @@ public class App
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext("ru.chursin");
         context.getBean(OperationCosoleListener.class).listenUpdates();
-        System.out.println("hhh");
     }
 
 }
