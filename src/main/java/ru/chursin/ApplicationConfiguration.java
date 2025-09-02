@@ -5,13 +5,12 @@ import org.springframework.context.annotation.Configuration;
 import ru.chursin.accaunt.AccountService;
 import ru.chursin.operations.ConsoleOperationType;
 import ru.chursin.operations.OperationCommandProcessor;
-import ru.chursin.operations.processors.AccountCreateProcessor;
-import ru.chursin.operations.processors.CreateUserProcessor;
-import ru.chursin.operations.processors.ShowAllUserProcessor;
 import ru.chursin.user.UserService;
 
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 @Configuration
 public class ApplicationConfiguration {
@@ -24,15 +23,15 @@ public class ApplicationConfiguration {
     @Bean
     public OperationConsoleListener operationConsoleListener(
             Scanner scanner,
-            CreateUserProcessor createUserProcessor,
-            AccountCreateProcessor accountCreateProcessor,
-            ShowAllUserProcessor showAllUserProcessor
+            List<OperationCommandProcessor> commandProcessorList
             ) {
-        Map<ConsoleOperationType, OperationCommandProcessor> map =
-                Map.of(
-                        ConsoleOperationType.USER_CREATE, createUserProcessor,
-                        ConsoleOperationType.ACCOUNT_CREATE, accountCreateProcessor,
-                        ConsoleOperationType.SHOW_ALL_USERS, showAllUserProcessor
+        Map<ConsoleOperationType, OperationCommandProcessor> map = commandProcessorList
+                .stream()
+                .collect(
+                        Collectors.toMap(
+                                OperationCommandProcessor::getOperationType,
+                                processor -> processor
+                        )
                 );
         return new OperationConsoleListener(scanner, map);
     }

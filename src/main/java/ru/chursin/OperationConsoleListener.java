@@ -20,7 +20,6 @@ public class OperationConsoleListener {
     }
 
     public void listenUpdates() {
-        System.out.println("type operation");
 
         while(true) {
             var operationType = listenNextOperation();
@@ -28,8 +27,19 @@ public class OperationConsoleListener {
         }
     }
 
+    public void start() {
+        System.out.println("Console listener started");
+    }
+
+    public void endListen() {
+        System.out.println("Console listener ended");
+    }
+
     private ConsoleOperationType listenNextOperation() {
-        System.out.println("type next operation: ");
+        System.out.println("\ntype next operation: ");
+
+        printAllAvailableOperations();
+        System.out.println();
 
         while(true) {
             var nextOperation = scanner.nextLine();
@@ -39,6 +49,11 @@ public class OperationConsoleListener {
                 System.out.println("no such common find");
             }
         }
+    }
+
+    private void printAllAvailableOperations() {
+        processorMap.keySet()
+                .forEach(System.out::println);
     }
 
     private void processNextOperation(ConsoleOperationType operation) {
