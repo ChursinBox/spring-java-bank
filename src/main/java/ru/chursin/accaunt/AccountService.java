@@ -25,7 +25,7 @@ public class AccountService {
 
     public Account createAccount(User user) {
         idCounter++;
-        Account account = new Account(idCounter,user.getId(), 0);  //todo default amount
+        Account account = new Account(idCounter,user.getId(), defaultAccountAmount);
         accountMap.put(account.getId(), account);
         return account;
     }
