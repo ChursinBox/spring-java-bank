@@ -1,12 +1,42 @@
 package ru.chursin.operations.processors;
 
+import ru.chursin.accaunt.Account;
+import ru.chursin.accaunt.AccountService;
 import ru.chursin.operations.ConsoleOperationType;
 import ru.chursin.operations.OperationCommandProcessor;
+import ru.chursin.user.User;
+import ru.chursin.user.UserService;
+
+import java.util.Scanner;
 
 public class CloseAccountProcessor implements OperationCommandProcessor {
+
+    private final Scanner scanner;
+    private final AccountService accountService;
+    private final UserService userService;
+
+    public CloseAccountProcessor(
+            Scanner scanner,
+            AccountService accountService,
+            UserService userService
+    ) {
+        this.scanner = scanner;
+        this.accountService = accountService;
+        this.userService = userService;
+    }
+
     @Override
     public void processOperation() {
+        System.out.println("Enter account id to close");
+        int accountId = Integer.parseInt(scanner.nextLine());
+        Account account = accountService.closeAccount(accountId);
+        User user = userService.findUserById(account.getUserId())
+                .orElseThrow(() -> new IllegalArgumentException("No such  user with id=%s"
+                        .formatted(account.getUserId())));
+        user.getAccountList().remove(account);
 
+        System.out.println("Account closed with Id=%s"
+                .formatted(accountId));
     }
 
     @Override

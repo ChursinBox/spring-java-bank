@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="3d1f185a-589d-423f-8985-762b1d5c0df6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/chursin/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/chursin/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/chursin/ApplicationConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/chursin/ApplicationConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/chursin/OperationConsoleListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/chursin/OperationConsoleListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/chursin/accaunt/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/chursin/accaunt/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/chursin/operations/processors/CloseAccountProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/chursin/operations/processors/CloseAccountProcessor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,22 +36,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.App.executor": "Run",
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "inlay.hints",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.App.executor&quot;: &quot;Run&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.chursin.App" />
@@ -90,6 +90,7 @@
       <updated>1756677901768</updated>
       <workItem from="1756677902978" duration="11148000" />
       <workItem from="1756753238005" duration="5608000" />
+      <workItem from="1756851046711" duration="7579000" />
     </task>
     <task id="LOCAL-00001" summary="1 commit">
       <option name="closed" value="true" />
@@ -115,7 +116,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756758272680</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="6 commit">
+      <option name="closed" value="true" />
+      <created>1756851262147</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1756851262147</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,6 +134,7 @@
     <MESSAGE value="1 commit" />
     <MESSAGE value="2 commit" />
     <MESSAGE value="5 commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="5 commit" />
+    <MESSAGE value="6 commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="6 commit" />
   </component>
 </project>
