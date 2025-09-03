@@ -6,7 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="3d1f185a-589d-423f-8985-762b1d5c0df6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/chursin/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/chursin/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/chursin/ApplicationConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/chursin/ApplicationConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/chursin/OperationConsoleListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/chursin/OperationConsoleListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/chursin/accaunt/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/chursin/accaunt/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/chursin/operations/processors/CloseAccountProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/chursin/operations/processors/CloseAccountProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/chursin/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/chursin/user/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +93,7 @@
       <updated>1756677901768</updated>
       <workItem from="1756677902978" duration="11148000" />
       <workItem from="1756753238005" duration="5608000" />
-      <workItem from="1756851046711" duration="9493000" />
+      <workItem from="1756851046711" duration="12280000" />
     </task>
     <task id="LOCAL-00001" summary="1 commit">
       <option name="closed" value="true" />
@@ -130,7 +135,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756888019786</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="8 commit, all done">
+      <option name="closed" value="true" />
+      <created>1756889859574</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1756889859574</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,6 +155,7 @@
     <MESSAGE value="5 commit" />
     <MESSAGE value="6 commit" />
     <MESSAGE value="7 commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="7 commit" />
+    <MESSAGE value="8 commit, all done" />
+    <option name="LAST_COMMIT_MESSAGE" value="8 commit, all done" />
   </component>
 </project>

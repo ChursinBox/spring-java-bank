@@ -1,6 +1,7 @@
 package ru.chursin.user;
 
 import org.springframework.aot.generate.AccessControl;
+import org.springframework.stereotype.Service;
 import ru.chursin.accaunt.Account;
 import ru.chursin.accaunt.AccountService;
 
@@ -12,6 +13,7 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 
+@Service
 public class UserService {
 
     private final Map<Integer, User> userMap;

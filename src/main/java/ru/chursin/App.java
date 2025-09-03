@@ -8,10 +8,6 @@ public class App
     {
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext("ru.chursin");
-        OperationConsoleListener consoleListener = context.getBean(OperationConsoleListener.class);
-        consoleListener.start();
-        consoleListener.listenUpdates();
-        consoleListener.endListen();
     }
 
 }

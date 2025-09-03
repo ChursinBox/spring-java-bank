@@ -1,5 +1,6 @@
 package ru.chursin.operations.processors;
 
+import org.springframework.stereotype.Component;
 import ru.chursin.accaunt.Account;
 import ru.chursin.accaunt.AccountService;
 import ru.chursin.operations.ConsoleOperationType;
@@ -9,6 +10,7 @@ import ru.chursin.user.UserService;
 
 import java.util.Scanner;
 
+@Component
 public class CloseAccountProcessor implements OperationCommandProcessor {
 
     private final Scanner scanner;

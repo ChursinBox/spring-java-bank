@@ -1,28 +1,43 @@
 package ru.chursin;
 
+import org.springframework.stereotype.Component;
 import ru.chursin.operations.ConsoleOperationType;
 import ru.chursin.operations.OperationCommandProcessor;
 
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
+@Component
 public class OperationConsoleListener {
 
     private final Scanner scanner;
     private final Map<ConsoleOperationType, OperationCommandProcessor> processorMap;
+    ;
 
     public OperationConsoleListener(
             Scanner scanner,
-            Map<ConsoleOperationType, OperationCommandProcessor> processorMap
+            List<OperationCommandProcessor> processorList
     ) {
         this.scanner = scanner;
-        this.processorMap = processorMap;
+        this.processorMap = processorList
+                .stream()
+                .collect(
+                        Collectors.toMap(
+                                OperationCommandProcessor::getOperationType,
+                                processor -> processor
+                        )
+                );
     }
 
     public void listenUpdates() {
 
-        while(true) {
+        while(!Thread.currentThread().isInterrupted()) {
             var operationType = listenNextOperation();
+            if (operationType == null) {
+                return;
+            }
             processNextOperation(operationType);
         }
     }
@@ -41,7 +56,7 @@ public class OperationConsoleListener {
         printAllAvailableOperations();
         System.out.println();
 
-        while(true) {
+        while(!Thread.currentThread().isInterrupted()) {
             var nextOperation = scanner.nextLine();
             try {
                 return ConsoleOperationType.valueOf(nextOperation);
@@ -49,6 +64,7 @@ public class OperationConsoleListener {
                 System.out.println("no such common find");
             }
         }
+        return null;
     }
 
     private void printAllAvailableOperations() {
